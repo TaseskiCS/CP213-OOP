@@ -1,0 +1,97 @@
+SingleLink Data Structures Tests
+
+Tests are of the form:
+  Test Operation {expected object}: actual object
+  Contents: [contents from front to rear]
+
+================================================================================
+Testing SingleStack
+----------------------------------------
+SingleStack<Integer> source = new SingleStack<>();
+  isEmpty {true}: true
+----------------------------------------
+Push objects: [27, 12, 22, 47, 46, 1, 23]
+  push: 27
+  push: 12
+  push: 22
+  push: 47
+  push: 46
+  push: 1
+  push: 23
+  isEmpty {false}: false
+  peek {23}: 23
+  Contents: [23, 1, 46, 47, 22, 12, 27]
+----------------------------------------
+source.splitAlternate(left, right)
+source
+  isEmpty {true}: true
+  Contents: []
+left
+  isEmpty {false}: false
+  peek {27}: 27
+  Contents: [27, 22, 46, 23]
+right
+  isEmpty {false}: false
+  peek {12}: 12
+  Contents: [12, 47, 1]
+----------------------------------------
+target.combine(left, right)
+target
+  isEmpty {false}: false
+  peek {23}: 23
+  Contents: [23, 1, 46, 47, 22, 12, 27]
+left
+  isEmpty {true}: true
+  Contents: []
+right
+  isEmpty {true}: true
+  Contents: []
+----------------------------------------
+Clear target
+  Pop {23}: 23
+  Pop {1}: 1
+  Pop {46}: 46
+  Pop {47}: 47
+  Pop {22}: 22
+  Pop {12}: 12
+  Pop {27}: 27
+
+----------------------------------------
+Test Stack with strings
+test
+string
+123
+abc
+xyz
+================================================================================
+Testing SingleQueue
+----------------------------------------
+SingleQueue<Integer> source = new SingleQueue<>();
+  isEmpty {true}: true
+----------------------------------------
+Insert objects: [21, 9, 32, 1, 1, 36, 9]
+  insert: 21
+  insert: 9
+  insert: 32
+  insert: 1
+  insert: 1
+  insert: 36
+  insert: 9
+  isEmpty {false}: false
+  peek {21}: 21
+  Contents: [21, 9, 32, 1, 1, 36, 9]
+----------------------------------------
+source.splitAlternate(left, right)
+source
+  isEmpty {true}: true
+  Contents: []
+left
+  isEmpty {false}: false
+  peek {21}: 21
+  Contents: [21, 9, 32, 1, 9, 36, 1]
+right
+  isEmpty {false}: false
+  peek {9}: 9
+  Contents: [9, 32, 1, 9, 36, 1]
+----------------------------------------
+target.combine(left, right)

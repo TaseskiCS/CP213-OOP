@@ -1,0 +1,9 @@
+Push Me
+Slider: 65
+Textbox: Noty Sucks
+Spinner: February
+Radio Button: Star Trek
+Radio Button: Star Wars
+Checkbox: [Mustard]
+Checkbox: [Mustard, Onions]
+Checkbox: [Mustard, Onions, Ketchup]

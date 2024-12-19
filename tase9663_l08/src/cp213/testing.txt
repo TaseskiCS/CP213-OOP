@@ -1,0 +1,9 @@
+Base: 100
+Height: 100
+Hypotenuse: 141.42
+
+Slider: Good
+
+Base: 50
+Height: 50
+Hypotenuse: 70.71
